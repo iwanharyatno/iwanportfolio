@@ -3,6 +3,9 @@ import profile from '../assets/iwan_square_transparent.png';
 export default function Hero() {
     return (
         <section className="max-w-7xl mx-auto px-4 mt-12 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div
+                class="absolute top-1/2 left-1/2 w-[300px] h-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#D94B8B]/20 to-[#5B7ED7]/20 blur-3xl -z-10">
+            </div>
             <div className="flex-1 max-w-lg">
                 <h1 className="text-4xl sm:text-5xl font-semibold leading-tight">
                     <span className="text-gradient">FRONTEND</span><br />
@@ -16,9 +19,6 @@ export default function Hero() {
                 </button>
             </div>
             <div className="flex-1 max-w-[320px] md:max-w-[400px] relative">
-                <div
-                    class="absolute top-1/2 left-1/2 w-[300px] h-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#D94B8B] to-[#5B7ED7] blur-3xl -z-10">
-                </div>
                 <img alt="Portrait of Iwan Haryatno" className="w-full" src={profile} />
             </div>
         </section>

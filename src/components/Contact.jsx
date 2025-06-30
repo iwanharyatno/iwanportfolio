@@ -1,3 +1,6 @@
+import { faGithub, faInstagram, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function Contact() {
     return (
         <section className="max-w-7xl mx-auto px-4 mt-20 grid grid-cols-1 md:grid-cols-3 gap-12" id="contact">
@@ -12,10 +15,11 @@ export default function Contact() {
                 </div>
                 <div className="text-xs text-[#8B8B8B]">
                     <p className="font-semibold">SOCIAL MEDIA</p>
-                    <div className="flex space-x-4 mt-1 text-[#5B7ED7]">
-                        <a href="https://www.linkedin.com/in/iwanharyatno "><i className="fab fa-linkedin-in"></i></a>
-                        <a href="https://instagram.com/_iwan.h "><i className="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/6288232400859 "><i className="fab fa-whatsapp"></i></a>
+                    <div className="flex space-x-4 mt-1 text-[#5B7ED7] text-xl">
+                        <a href="https://www.linkedin.com/in/iwanharyatno" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a>
+                        <a href="https://github.com/iwanharyatno" target="_blank"><FontAwesomeIcon icon={faGithub} /></a>
+                        <a href="https://instagram.com/_iwan.h" target="_blank"><FontAwesomeIcon icon={faInstagram} /></a>
+                        <a href="https://wa.me/6288232400859" target="_blank"><FontAwesomeIcon icon={faWhatsapp} /></a>
                     </div>
                 </div>
             </div>
