@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #D94B8B, #8B6CC6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
