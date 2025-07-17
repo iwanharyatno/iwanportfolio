@@ -8,7 +8,7 @@ export default function Hero() {
             </div>
             <div className="flex-1 max-w-lg">
                 <h1 className="text-4xl sm:text-5xl font-semibold leading-tight">
-                    <span className="text-gradient">FRONTEND</span><br />
+                    <span className="text-gradient">WEB</span><br />
                     <span className="text-gradient">DEVELOPER</span>
                 </h1>
                 <p className="mt-6 text-sm font-normal leading-relaxed">
