@@ -18,7 +18,7 @@ export default function Hero() {
                     VIEW MY WORK
                 </button>
             </div>
-            <div className="flex-1 max-w-[320px] md:max-w-[400px] relative">
+            <div className="flex-1 max-w-[320px] md:max-w-[400px] relative rounded-full overflow-hidden">
                 <img alt="Portrait of Iwan Haryatno" className="w-full" src={profile} />
             </div>
         </section>
