@@ -1,11 +1,17 @@
 import { faCode, faServer, faTools } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from 'motion/react';
 
 export default function Services() {
     return (
         <section className="max-w-7xl mx-auto px-4 mt-20 space-y-12" id="services">
             <h2 className="text-xl font-semibold tracking-widest text-gradient">MY SERVICES</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <ServiceCard
                     icon={<FontAwesomeIcon icon={faCode} />}
                     title="Frontend Development"
@@ -21,14 +27,14 @@ export default function Services() {
                     title="DevOps & Deployment"
                     description="Setting up CI/CD pipelines, cloud hosting, containerization (Docker), domain setup, and performance optimization for fast and reliable deployments."
                 />
-            </div>
+            </motion.div>
         </section>
     );
 }
 
 function ServiceCard({ icon, title, description }) {
     return (
-        <div className="border border-[#3B3B3B] rounded-lg p-6 space-y-2 hover:shadow-lg transition-shadow duration-300">
+        <div className="border border-[#3B3B3B] rounded-lg p-6 space-y-2 hover:shadow-lg transition-shadow duration-300 bg-white/5 backdrop-blur-xs">
             <div className="flex items-center space-x-2 text-[#5B7ED7]">
                 {icon}
                 <h3 className="text-white font-semibold text-lg">{title}</h3>

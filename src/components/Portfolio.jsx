@@ -4,6 +4,7 @@ import promokna from "../assets/portfolio/promokna.png";
 import intermedia_lms from "../assets/portfolio/intermedia_lms.png";
 import skybridgefunrun from "../assets/portfolio/skybridgefunrun.png";
 import restorray from "../assets/portfolio/restorray.png";
+import { motion } from 'motion/react';
 
 export default function Portfolio() {
     const projects = [
@@ -55,9 +56,17 @@ export default function Portfolio() {
         <section className="max-w-7xl mx-auto px-4 mt-20" id="portfolio">
             <h2 className="text-xl font-semibold tracking-widest text-gradient">PORTFOLIO</h2>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-[900px] mx-auto">
-                {projects.map(project => (
-                    <div key={project.id} className="bg-[#121827] rounded-lg border border-[#3B3B3B] hover:shadow-lg transition-shadow duration-200 shadow-blue-900 relative cursor-pointer" onClick={() => window.open(project.link)}>
-                        <img src={project.image} alt={project.title} className="w-full" />
+                {projects.map((project, i) => (
+                    <motion.div
+                        key={project.id}
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: i * 0.1 }}
+                        className="bg-white/5 backdrop-blur-xs rounded-lg border border-[#3B3B3B] hover:shadow-lg transition-shadow duration-200 shadow-purple-600/20 cursor-pointer"
+                        onClick={() => window.open(project.link)}
+                    >
+                        <img src={project.image} alt={project.title} className="w-full rounded-t-lg" />
                         <div className="p-4 text-center text-xs text-white font-semibold tracking-wide">
                             <h3 className="mb-2 font-bold">{project.title}</h3>
                             <p className="text-gray-400">{project.tech}</p>
@@ -65,7 +74,7 @@ export default function Portfolio() {
                                 <i className="fas fa-external-link-alt"></i>
                             </a>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </section>
