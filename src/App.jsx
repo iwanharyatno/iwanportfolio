@@ -5,8 +5,11 @@ import Technologies from './components/Technologies';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import useAnalytics from './hooks/useAnalytics';
 
 function App() {
+    useAnalytics();
+
     return (
         <div className="min-h-screen w-full bg-[#020617] relative">
             {/* Magenta Orb Grid Background */}

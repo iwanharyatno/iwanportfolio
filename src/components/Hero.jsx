@@ -18,7 +18,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="mt-6 text-sm font-normal leading-relaxed">
-                    I am Iwan Haryatno - a passionate <a href="#" className="text-[#5B7ED7] underline hover:text-[#D94B8B]">web developer</a> who creates responsive and beautiful websites.
+                    I am Iwan Haryatno - a passionate <a href="#" className="text-[#D94B8B] hover:text-[#5B7ED7]">web developer</a> who creates responsive and beautiful websites.
                 </motion.p>
                 <motion.a
                     initial={{ opacity: 0, y: 50 }}
